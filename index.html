@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1>Tip Calculator</h1>
+    <div class="tipcont">
+        <div class="form">
+            <label>Customer Name</label>
+            <input type="text" placeholder="Enter Customer Name" id="customernameinput" onchange="changeName()" />
+            <div class="tippercentout">
+                <p class="head">Select Tip %</p>
+                <div class="tippercentin">
+                    <!-- 1 , 5 ,10 ,15 -->
+                    <p onclick="tippercenttoinput('1')">1%</p>
+                    <p onclick="tippercenttoinput('5')">5%</p>
+                    <p onclick="tippercenttoinput('10')">10%</p>
+                    <p onclick="tippercenttoinput('15')">15%</p>
+                </div>
+                <input type="number" placeholder="Type Custom Tip %" id="customtipinput" onchange="changetip()" />
+            </div>
+
+            <div class="additem">
+                <p>Add Item</p>
+                <div class="additemrow">
+                    <input type="text" placeholder="Item Name" id="itemnameinput" />
+                    <p class="empty"></p>
+                    <input type="number" placeholder="Item Quantity" id="itemqtyinput" />
+                </div>
+                <input type="number" placeholder="Item Price" id="itempriceinput" />
+                <button onclick="addItem()">Add</button>
+            </div>
+        </div>
+        <div class="bill">
+            <div class="s1">
+                <label>Customer Name</label>
+                <p id="nameval">-</p>
+            </div>
+            <div class="s2">
+                <h2>Items</h2>
+                <div id="allitems">
+                    <!-- <div class="s1">
+                     
+                    </div>
+                 -->
+                </div>
+            </div>
+
+            <div class="s1">
+                <p>Bill Amount</p>
+                <p id="billamt">Rs 0</p>
+            </div>
+
+            <div class="s1">
+                <p>Tip %</p>
+                <p id="tipval">0 %</p>
+            </div>
+
+            <div class="s1">
+                <label>Total Amount</label>
+                <p id="totalamount">Rs 0</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>Created By <span>Dhiraj Maurya</span> | &copy; 2023 All rights reserved</p>
+      </footer>
+</body>
+</html>
