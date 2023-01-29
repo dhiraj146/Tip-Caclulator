@@ -5,7 +5,8 @@
     let itempriceinput = document.getElementById("itempriceinput");
     let billamt = document.getElementById("billamt");
     let totalamount = document.getElementById("totalamount");
-
+    let sgst= document.getElementById("sgst");
+    let cgst=document.getElementById("cgst");
     const changeName = () => {
         let nameval = document.getElementById("nameval");
         if (customernameinput.value == "") {
@@ -85,6 +86,8 @@
             let item = itemarray[i];
             total += item.qty * item.price;
         }
+        sgst.innerHTML="Rs "+total*9/100;
+        cgst.innerHTML="Rs "+total*9/100;
         billamt.innerHTML = "Rs " + total;
-        totalamount.innerHTML  = "RS "+ (total + (total*customtipinput.value/100))
+        totalamount.innerHTML  = "RS "+ (total + (total*customtipinput.value/100) + (total*9/100)+(total*9/100))
     }
